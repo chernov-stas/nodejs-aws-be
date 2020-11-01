@@ -1,0 +1,37 @@
+[
+  {
+    "id": "0001",
+    "title": "Giant XTC ADVANCED SL 29",
+    "description": "When it comes to pure XC climbing, acceleration and speed, nothing beats the efficiency of this lightweight composite hardtail. Engineered for pedaling stiffness, quick handling and the smooth, balanced ride of 29-inch wheels, it’s just the kick you need to move up through the pack.",
+    "price": 4700,
+    "image": "https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/raoexgnhw475gg8a0ivc/MY21XTC_ADSL_29_1_ColorAChameleonNeptune.jpg"
+  },
+  {
+    "id": "0002",
+    "title": "Giant TRINITY ADVANCED",
+    "description": "From Ironman distance triathlons to shorter efforts against the clock, give yourself a true advantage in speed and aerodynamics. This super-efficient composite machine gives you everything you need to chase a new PR.",
+    "price": 2500,
+    "image": "https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/af3wkcrvzwa6jymv3jbw/MY21TRIADV_ColorACharcoal.jpg"
+  },
+  {
+    "id": "0003",
+    "title": "Giant TCR ADVANCED PRO 0 DISC",
+    "description": "Climb, corner and descend with unrivaled all-rounder performance. From the mountains to the flats, in all types of conditions, the new TCR Advanced Pro Disc takes it to the next level with a lighter, stiffer frame and new aero-engineered tubing.",
+    "price": 5600,
+    "image": "https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/kpik7gewcuog3cxxhhlt/MY21TCRADPRO0D_ColorAChameleonNeptune.jpg"
+  },
+  {
+    "id": "0004",
+    "title": "Giant REVOLT ADVANCED 0",
+    "description": "Almost anything goes in gravel racing and riding. It’s a mixed-up challenge of speed, endurance and handling. This high-performance all-rounder does it all. It’s smooth, it’s efficient, and it’s your new best friend for pushing limits on roads, gravel and dirt.",
+    "price": 3650,
+    "image": "https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/nyvsi3arxdxoctqqed8x/MY20RevoltADV0_ColorA.jpg"
+  },
+  {
+    "id": "0005",
+    "title": "Giant TCX ADVANCED",
+    "description": "Blast through the sandpit, carve through corners, and lay down the power on the final finishing stretch. This sharp-handling cyclocross machine is made for podium pursuits during ’cross season and mixed road and dirt rides all year long.",
+    "price": 2550,
+    "image": "https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/emy2d8xyimy2caui4wbs/MY20TCXADV_ColorA.jpg"
+  }
+]
