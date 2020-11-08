@@ -38,6 +38,10 @@ module.exports = {
           experimentalWatchApi: true,
         },
       },
+      {
+        test: /\.sql$/i,
+        loader: 'raw-loader',
+      },
     ],
   },
   plugins: [

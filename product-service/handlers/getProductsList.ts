@@ -1,27 +1,38 @@
 import {APIGatewayProxyHandler} from "aws-lambda";
-import {getMockedProducts} from "../utils";
+import dbConnect from "../db";
+import getAllProducts from '../db/selectAllProducts.sql';
+import {handleError, HTTPError} from "../utils";
 
-export const getProductsList: APIGatewayProxyHandler = async () => {
+export const getProductsList: APIGatewayProxyHandler = async (event) => {
+
+    console.log('getProductsList lambda executed with event:', event);
 
     try {
-        const ProductsList = await getMockedProducts();
+        const client = await dbConnect();
 
-        if (!ProductsList || !ProductsList.length) {
-            throw new Error('No products found');
-        } else {
-            return {
-                headers: {
-                    'Access-Control-Allow-Origin': '*',
-                },
-                statusCode: 200,
-                body: JSON.stringify(ProductsList),
-            };
+        try {
+            const response = await client.query(getAllProducts);
+            const products = response.rows;
+
+            if (!products || !products.length) {
+                throw new HTTPError({message: 'No products found', code: 404});
+            } else {
+                return {
+                    headers: {
+                        'Access-Control-Allow-Origin': '*',
+                    },
+                    statusCode: 200,
+                    body: JSON.stringify(products),
+                };
+            }
+
+        } catch(err) {
+            return handleError(err);
+        } finally {
+            client.end();
         }
 
-    } catch(err) {
-        return {
-            statusCode: 404,
-            body: err.message
-        };
+    } catch (err) {
+        return handleError(err);
     }
 };
