@@ -1,0 +1,1 @@
+export const BUCKET = 'aws-rssapp-catalog';
