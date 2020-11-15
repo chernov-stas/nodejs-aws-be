@@ -10,3 +10,23 @@ export const getMockedProducts = async ():Promise<Array<Product>> => {
         )
     );
 }
+
+export class HTTPError extends Error {
+    code: number;
+
+    constructor(data){
+        super(data.message);
+        this.code = data.code;
+    }
+}
+
+export const handleError = (err: HTTPError) => {
+    console.error('Error occurred:', JSON.stringify(err));
+    return {
+        headers: {
+            'Access-Control-Allow-Origin': '*',
+        },
+        statusCode: err.code,
+        body: err.message
+    };
+}
